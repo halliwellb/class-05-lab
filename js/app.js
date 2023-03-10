@@ -48,7 +48,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-  return [a + b + c, a * b * c, '4 and 7 and 5 sum to 16.', 'The product of 4 and 7 and 5 is 140.'];
+  let sumOne = sum(a,b)[0];
+  let sumTwo = sum(sumOne,c)[0];
+  let pOne = multiply(a,b)[0];
+  let pTwo = multiply(pOne,c)[0];
+  let sumString = '4 and 7 and 5 sum to 16.';
+  let productString = 'The product of 4 and 7 and 5 is 140.';
+  return [sumTwo, pTwo, sumString, productString];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
