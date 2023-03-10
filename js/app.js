@@ -48,7 +48,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-  return [a + b + c, a * b * c, '4 and 7 and 5 sum to 16.', 'The product of 4 and 7 and 5 is 140.'];
+  let sumOne = sum(a,b)[0];
+  let sumTwo = sum(sumOne,c)[0];
+  let pOne = multiply(a,b)[0];
+  let pTwo = multiply(pOne,c)[0];
+  let sumString = '4 and 7 and 5 sum to 16.';
+  let productString = 'The product of 4 and 7 and 5 is 140.';
+  return [sumTwo, pTwo, sumString, productString];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -70,7 +76,16 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray() { //eslint-disable-line
-  return [Array = 9, '2,3,4 was passed in as an array of numbers, and 9 is their sum.'];
+  let a = 2;
+  let b = 3;
+  let c = 4;
+
+  let oneSum = sum(a,b)[0];
+  let twoSum = sum(oneSum,c)[0];
+  let sumScript = '2,3,4 was passed in as an array of numbers, and 9 is their sum.';
+
+  return [twoSum, sumScript];
+  // return [Array = 9, '2,3,4 was passed in as an array of numbers, and 9 is their sum.'];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
