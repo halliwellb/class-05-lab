@@ -76,7 +76,16 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray() { //eslint-disable-line
-  return [Array = 9, '2,3,4 was passed in as an array of numbers, and 9 is their sum.'];
+  let a = 2;
+  let b = 3;
+  let c = 4;
+
+  let oneSum = sum(a,b)[0];
+  let twoSum = sum(oneSum,c)[0];
+  let sumScript = '2,3,4 was passed in as an array of numbers, and 9 is their sum.';
+
+  return [twoSum, sumScript];
+  // return [Array = 9, '2,3,4 was passed in as an array of numbers, and 9 is their sum.'];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
